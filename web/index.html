@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Front page</title>
+    <link rel="icon" href="image/images.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="home.css">
+    <!-- <meta http-equiv = "refresh" content = "3; url = home.html" /> -->
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img id="image" src="image/images.jpg" />
+            <h1>Galaxy Store</h1>
+        </div>
+        <ul id="menu">
+            <li><a target="_blank" href="home.html">Home</a></li>
+            <li><a target="_blank" href="http://www.apple.com">About us</a></li>
+            <li><a target="_blank" href="product.html">Products</a></li>
+            <li><a target="_blank" href="http://www.fecbook.com">Services</a></li>
+            <li><a target="_blank" href="https://www.github.com/gautamvala36">Contact</a></li>
+            <li><a target="_blank" href="https://www.youtube.com">Privacy Policy</a></li>
+        </ul>
+        <img id="menu-icon" width="100px" src="image/icon.png" onclick="ToggleMenu();" />
+    </div>
+    <div id="responsive-menu" class="invisible-menu">
+        <ul>
+            <li><a target="_blank" href="home.html">Home</a></li>
+            <li><a target="_blank" href="http://www.apple.com">About us</a></li>
+            <li><a target="_blank" href="products.html">Products</a></li>
+            <li><a target="_blank" href="http://www.fecbook.com">Services</a></li>
+            <li><a target="_blank" href="https://www.github.com/gautamvala36">Contact us</a></li>
+            <li><a target="_blank" href="https://www.youtube.com">Privacy Policy</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Welcome To Galaxy Store</h1>
+        <a href="home.html" target="_blank"><img class="h3" src="image/galaxy-store-logo.png"></a>
+
+    </div>
+    <div id="footer" style="position: fixed">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, dignissimos.
+    </div>
+    <script>
+        //user defined function 
+        function ToggleMenu() {
+            var ClassName = document.getElementById("responsive-menu").className;
+            if (ClassName == "invisible-menu") {
+                document.getElementById("responsive-menu").className = "visible-menu";
+            }
+            else {
+                document.getElementById("responsive-menu").className = "invisible-menu";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Example of document.getElementById()</h1>
+    <h2>value property example</h2>
+    <form action="">
+        <table border="2" width="50%" align="center">
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="email" placeholder="Email" value="Gautamvala@gmail.com"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="output"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        var email_adders = document.getElementById("email").value;
+        document.getElementById("output").innerHTML = email_adders;
+        document.getElementById("email").value =" Gautam@gmail.com";
+    </script>
+</body>
+
+</html>

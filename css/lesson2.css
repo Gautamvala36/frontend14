@@ -1,0 +1,87 @@
+body {
+    font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  margin: 0px;
+  letter-spacing: 1px;
+  padding: 0px;
+}
+
+.h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.india {
+  background-image: url("image/india-logo.png");
+  background-color: rgb(63, 211, 216);
+  box-shadow: 15px 15px 15px rgb(59, 106, 107);
+  /* color:rgb(8, 43, 238); */
+}
+
+.australia {
+  background-image: url("image/australia-logo.png");
+  background-color: rgb(252, 248, 5, 0.842);
+  box-shadow: 15px 15px 15px rgb(185, 177, 100);
+  /* color:#00843d; */
+}
+
+.india,
+.australia {
+  padding: 10px 20px;
+  width: 50%;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+}
+
+.team {
+  display: flex;
+  gap: 20px;
+}
+
+.team > div > h1 {
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 5px 5px 5px #bbbbbb;
+}
+
+.captain {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.india > ol > li,
+.australia > ol > li {
+  line-height: 200%;
+  /* border-bottom: 2px solid black; */
+}
+
+.india > ol,
+.australia > ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.bat,
+.captain {
+  list-style-image: url("image/bat-logo.png");
+}
+
+.ball {
+  list-style-image: url("image/ball-logo.png");
+}
+
+.all {
+  list-style-image: url("image/all-logo.png");
+}
+
+.wc {
+  list-style-image: url("image/wc-logo.png");
+}
+
+li:hover {
+  background-color: rgb(214, 198, 198);
+}

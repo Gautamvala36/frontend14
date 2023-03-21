@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@500&display=swap');
+*
+{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+body 
+{
+    background-color: #F1F0EB;
+    color:#4056a1;
+}
+#header 
+{
+    background-color: #d79922;
+    display: flex;
+    justify-content: space-between; /* horizontal aligment */
+    position: sticky;
+    top:0px;
+}
+#responsive-menu
+{
+    background-color: #d79922;
+}
+#menu-icon
+{
+    display: none;
+}
+#footer 
+{
+    background-color: #efe2ba;
+    position:sticky;
+    bottom: 0px;
+    padding:20px 0px;
+    text-align: center;
+}
+#logo-title
+{
+    display: flex;
+    align-items: center; /* vertical aligment */
+}
+#menu 
+{
+    display: flex;
+    list-style-type: none;
+    align-items: center; 
+}
+#logo-title>h1 
+{
+    font-size: 1.3em;
+    color:white;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-family: 'Roboto Slab', serif;
+   
+}
+.invisible-menu 
+{
+    display: none;
+}
+.visible-menu 
+{
+    display: block;
+}
+
+#menu>li>a:link , #menu>li>a:visited, #responsive-menu>ul>li>a:link, #responsive-menu>ul>li>a:visited
+{
+    color:white;
+    padding:10px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+}
+#menu>li>a:hover
+{
+    background-color: white;
+    color:black;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#content
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#content>p 
+{
+    text-indent: 100px;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 125%;
+}
+#shop 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product
+{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.product>h3 
+{
+    text-align: center;
+    margin: 10px 0px;
+}
+.product>img 
+{
+    width: 100%;
+}
+.product>div
+{
+    display:flex;
+    justify-content: space-between;
+    height: 28px;
+}
+.product>div>span>a:link
+{
+    background-color:  #d79922;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+      /* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
+      @media (min-width: 1281px) {
+        /* code in this block will be applied only if device width>1281 */
+        .product
+        {
+            width:calc(25% - 20px)
+        }
+    }
+    
+      /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+      @media (min-width: 1025px) and (max-width: 1280px) {
+        /* code in this block will be applied only if device width>1025 and <1280 */
+        .product
+        {
+            width:calc(33% - 20px)
+        }
+        #menu>li>a:link , #menu>li>a:visited
+        {
+            font-size: 0.80em;
+            padding:10px 3px;
+        }
+        #logo-title>h1 
+        {
+            font-size: 1.1em;
+        }
+      }
+      
+      /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        /* code in this block will be applied only if device width>768 and <1024 */
+        .product
+        {
+            width:calc(50% - 20px)
+        }
+        #menu
+        {
+            display: none;
+        }
+        #menu-icon
+        {
+            display:initial;
+        }
+      }
+      /* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
+      @media (min-width: 481px) and (max-width: 767px) {
+        /* code in this block will be applied only if device width>481 and <767 */
+        .product
+        {
+            width:100%;
+        }
+        #menu
+        {
+            display: none;
+        }
+        #menu-icon
+        {
+            display:initial;
+        }
+      }
+      
+      /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */ 
+      @media (min-width: 320px) and (max-width: 480px) {
+        /* code in this block will be applied only if device width>320 and <480 */
+        .product
+        {
+            width:100%;
+        }
+        #menu
+        {
+            display: none;
+        }
+        #menu-icon
+        {
+            display:initial;
+        }
+    }

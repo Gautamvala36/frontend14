@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<style>
+    body {
+        background-image: url('ima.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+    <form action="success.html" method="POST">
+        <table align="center" cellpadding="10" width="25%">
+            <tr>
+                <td>
+                    <h2 align="center">Register Form</h2>
+                    <hr color="white">
+                    Full Name <br>
+                    <input type="text" name="fname" placeholder="Full Name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email Id<br>
+                    <input type="email" name="email" placeholder="hello@gamil.com" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password <br>
+                    <input type="password" name="password" placeholder="password" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select Birthdate <br>
+                    <input type="date" name="dob" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pincode <br>
+                    <input type="pin" name="pincode" placeholder="city pincode" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mobile No. <br>
+                    <input type="tel" name="mobile" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Mobile No"
+                        required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select Photo <br>
+                    <input type="file" name="photo" accept="image/*" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender <br>
+                    <label for="male">
+                        <input id="male" type="radio" name="gender" value="1">Male
+                    </label>
+                    <label for="female">
+                        <input id="female" type="radio" name="gender" value="0">Female
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select Languge <br>
+                    <label for="gujarati">
+                        <input type="checkbox" id="gujarati" value="1">Gujarati
+                    </label><br>
+                    <label for="hindi">
+                        <input type="checkbox" id="hindi" value="2">Hindi
+                    </label><br>
+                    <label for="english">
+                        <input type="checkbox" id="english" value="4">English
+                    </label><br>
+                    <label for="marathi">
+                        <input type="checkbox" id="marathi" value="8" />Marathi
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select State <br>
+                    <select name="state">
+                        <option value="">Select</option>
+                        <option value="1">Gujarat</option>
+                        <option value="2">Maharastra</option>
+                        <option value="3">Rajasthan</option>
+                        <option value="4">Madhya pradesh</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address <br>
+                    <textarea name="address" cols="30" rows="3">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="submit" name="submit" value="Submit form">
+                    <input type="reset" name="reset" value="clear all">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

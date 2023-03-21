@@ -1,0 +1,34 @@
+.card-img {
+  opacity: 0.4;
+}
+.carousel-caption .display-4 {
+  font-family: serif;
+  color:  black;
+}
+header,
+.navbar {
+  color: black;
+  background-color: white;
+  font-size: 15px;
+  text-transform: capitalize;
+  font: bold;
+}
+ul li a.active {
+  color: black;
+}
+
+.navbar .nav-item:hover .nav-link {
+  color: #fe8906;
+}
+
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgba(103, 107, 111, 1) 32%,
+    rgba(160, 193, 192, 1) 85%
+  );
+}
+
+a:link {
+  text-decoration: none;
+}

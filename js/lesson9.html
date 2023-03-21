@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p,
+        div {
+            background-color: cyan;
+            color: blue;
+            padding: 10px;
+            border: 2px solid black;
+            font-size: 2em;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Example of document.getElementById()</h1>
+    <h2>innerHTML & innerText example</h2>
+    <hr>
+
+    <p id="output">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo quos in esse aspernatur. Veniam ab quo
+        sapiente quidem similique, beatae repellat exercitationem libero nesciunt sunt culpa placeat aperiam rerum
+        natus!</p>
+
+    <div id="output2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo quos in esse aspernatur. Veniam ab
+        quo
+        sapiente quidem similique, beatae repellat exercitationem libero nesciunt sunt culpa placeat aperiam rerum
+        natus!</div>
+
+    <script>
+        // Example of document.getElementById().innerHTML
+
+        //change content of tag
+        document.getElementById("output").innerHTML = "Hello GOOD";
+
+        //get content of tag 
+        var content = document.getElementById("output").innerHTML;
+        alert(content);
+
+
+        // Example of document.getElementById().innerText
+        //change content of tag
+        document.getElementById("output2").innerText = "this paragraph content is modified using <b>javascript</b>";
+
+        //get content of tag 
+        var content2  = document.getElementById("output2").innerText;
+        alert(content2);
+    </script>
+</body>
+
+</html>

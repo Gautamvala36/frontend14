@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2" width="50%" align="center">
+        <tr>
+            <td>PI Value</td>
+            <td id="pi"></td>
+        </tr>
+        <tr>
+            <td>area of rectangle</td>
+            <td id="area"></td>
+        </tr>
+        <tr>
+            <td>Current Date and time</td>
+            <td id="currentdatetime"></td>
+        </tr>
+    </table>
+    <script>
+        function getpi() {
+            return pi = 3.14;
+        }
+        function getArea() {
+            let w = 10;
+            let l = 5;
+            let ans = w * l;
+            return ans;
+        }
+        function showCurrentDateTime() {
+            let date = new Date();
+            let datetime = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+            html('currentdatetime', datetime);
+        }
+        function html(id, message) {
+            document.getElementById(id).innerHTML = message;
+        }
+        var pi = getpi();
+        html('pi', pi);
+        var result = getArea();
+        html('area', result);
+        showCurrentDateTime();
+    </script>
+</body>
+</html>
