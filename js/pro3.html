@@ -1,0 +1,81 @@
+<!--create web page which has javascript to accept two  numeric values using html input tag and then calculate result of addition, substraction, multiplication, division and display it in web page using in some tag. use 1st method to handle event. there are four button one for each operations
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="card">
+                    <div class="card-header">
+                        Calculate
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <input type="number" name="num1" id="num1">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" name="num2" id="num2">
+
+                            </div>
+                            <div class="mb-3">
+                                <input type="button" value=" + (Addition)" id="add"
+                                    onclick="Calculate(this.id,event,value)">
+                                <input type="button" value=" - (Substraction)" id="sub"
+                                    onclick="Calculate(this.id,event,value)">
+                                <input type="button" value=" * (Multiplication)" id="mul"
+                                    onclick="Calculate(this.id,event,value)">
+                                <input type="button" value=" / (Division)" id="div"
+                                    onclick="Calculate(this.id,event,value)">
+                            </div>
+                            <div id="output">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/16e157803b.js" crossorigin="anonymous"></script>
+    <script>
+        function Calculate(buttonid, event, value) {
+            var num1 = parseInt(val('num1'));
+            var num2 = parseInt(val('num2'));
+            var result = null;
+            var result = null;
+            if (buttonid == 'add') {
+                result = '<br/> result of Addition is ' + (num1 + num2);
+            }
+            else if (buttonid == 'sub') {
+                result = '<br/> result of Substraction is ' + (num1 - num2);
+            }
+            else if (buttonid == 'mul') {
+                result = '<br/> result of Multiplication is ' + (num1 * num2);
+            }
+            else {
+                result = '<br/> result of Division is ' + (num1 / num2);
+            }
+            console.log(result);
+            html('output', result, true)
+        }
+    </script>
+    <script src="my.js"></script>
+</body>
+
+</html>
