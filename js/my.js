@@ -6,3 +6,4 @@
     else
     document.getElementById(id).innerHTML += message;
 }
+let val = (id) =>document.getElementById(id).value; 
