@@ -1,13 +1,9 @@
-body {
-  /* font-family: ZCOOL XiaoWei; */
-}
-header,
 .navbar {
-  color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   text-transform: capitalize;
-  position: relative;
+  background-color: black;
 }
+
 ul li a.active {
   color: #f2c64d;
 }
@@ -22,13 +18,10 @@ p {
   color: #777777;
 }
 
-.footer{
+.footer {
   background-color: #202020;
 }
 
 a:link {
   text-decoration: none;
-}
-.row{
-  --bs-gutter-x: 0rem;
 }
