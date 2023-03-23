@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table height="50%" border="2" align="center" cellpadding="10">
+        <tr>
+            <td>
+                <input type="number" name="num1" id="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Get Square" id="square" onclick="Calculate(this.id,event,value);">
+                <input type="button" value="Get Qube" id="qube" onclick="Calculate(this.id,event,value);">
+            </td>
+        </tr>
+        <tr>
+            <td id="output">
+
+            </td>
+        </tr>
+    </table>
+    <script>
+        function Calculate(buttonid,event,value) {
+            // alert("hooloo");
+            var num1 = parseInt(val('num1'));
+            console.log(num1);
+            var result = null;
+            if (button == "square") {
+                result = '<br/> result of square is ' + (num1 * num1);
+            }
+            else {
+                result = '<br/> result of qube is ' + (num1 * num1 * num1); F
+            }
+            document.getElementById('output').innerHTML = result;
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Conditional operator (?)</h1>
+    <script>
+        let messege = null;
+        let time = prompt("Enter are you time", '0');
+        messege = parseInt(time);
+        if (time >= 6 && time < 12) {
+            messege = "good morning";
+        }
+        else if (time >= 12 && time < 19) {
+            messege = "good aft...";
+        }
+        else if (time >= 19 && time < 22) {
+            messege = "good ev...";
+        }
+        else{
+            messege = "good nin...";
+        }
+        alert(messege);
+    </script>
+</body>
+
+</html>
