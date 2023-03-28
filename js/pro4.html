@@ -1,0 +1,97 @@
+<!-- 4) create web page which has javascript to accept height, width, and length of room from user using input tag & bootstrap, handle onsubmit event and check all inputs are valid or nor not. if valid calculate and display volume of room otherwise display error. -->
+
+<!-- V(volume) = w(width) x h(height) x l(length) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="card shadow mt-3">
+                    <div class="card-header">
+                        <h3>
+                            Calculator
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="submit.html" method="post" onsubmit="return validateInput();">
+                            <div class="mb-3">
+                                <input type="number" id="width" placeholder="Width Centimeter " class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" id="height" placeholder="Height Centimeter " class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" id="length" placeholder="Length Centimeter " class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" class="btn btn-dark" value="Calculator">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/16e157803b.js" crossorigin="anonymous"></script>
+    <script src="my.js"></script>
+    <script>
+        function validateInput() {
+            var width = document.getElementById('width');
+            var height = document.getElementById('height');
+            var length = document.getElementById('length');
+            if (width.value == "") {
+                alert("width can not be empty");
+                width.focus();
+            }
+            else if (isNumeric(width.value) == false) {
+                alert("width must be only numbers");
+                width.focus();
+            }
+            else if (height.value == "") {
+                alert("height can not be empty");
+                height.focus();
+            }
+            else if (isNumeric(height.value) == false) {
+                alert("height must be only numbers");
+                height.focus();
+            }
+            else if (length.value == "") {
+                alert("length can not be empty");
+                length.focus();
+            }
+            else if (isNumeric(length.value) == false) {
+                alert("length must be only numbers");
+                length.focus();
+            }
+            else {
+                var w, h, l;
+                w = parseInt(width.value);
+                h = parseInt(height.value);
+                l = parseInt(length.value);
+                var calculator = w * h * l;
+                alert(calculator);
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

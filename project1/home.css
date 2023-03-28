@@ -15,6 +15,10 @@ body {
   line-height: 29px;
   font-style: normal;
 }
+.nav-link{
+  font-size: 18px;
+  
+}
 .navbar .nav-item:hover .nav-link {
   color: #00aeef;
 }
@@ -39,6 +43,6 @@ body {
   background-size: cover;
 }
 
-.row{
-  --bs-gutter-x: 0.rem;
+a:link {
+  text-decoration: none;
 }
