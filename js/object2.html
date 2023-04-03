@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>2st method to create object</h1>
+    <div id="root">
+
+    </div>
+    <script>
+        "use strict";
+        var person = new Object({
+
+            name : '',
+            age : 0,
+            course : '',
+            location : '',
+            gender : false,
+            display : function(){
+                var root = document.getElementById("root"); 
+                root.innerHTML += "Name : " + this.name;
+                root.innerHTML += "<br>Age : " + this.age;
+                root.innerHTML += "<br>Course : " + this.course;
+                root.innerHTML += "<br>Location : " + this.location;
+                root.innerHTML += "<br>Gender : " + this.gender;
+                root.innerHTML += "<hr>"
+            }
+        });
+        var user = person;
+        user.name = "Gautam vala";
+        user.age = 21;
+        user.course = "PHP";
+        user.location = "Bhavnagar";
+        user.gender = true;
+        user.display();
+        
+        var user = person;
+        user.name = "Gautam vala";
+        user.age = 21;
+        user.course = "PHP";
+        user.location = "Bhavnagar";
+        user.gender = true;
+        user.display();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>3st method to create object</h1>
+    <div id="root">
+
+    </div>
+    <script>
+        "use strict";
+        function book(name,price,pages,author)
+        {
+            this.name = name,
+            this.price = price,
+            this.pages = pages,
+            this.author = author,
+            this.display = function ()
+            {
+                var root = document.getElementById("root");
+                root.innerHTML += "<br>Name : " + this.name;
+                root.innerHTML += "<br>Price : " + this.price;
+                root.innerHTML += "<br>Pages : " + this.pages;
+                root.innerHTML += "<br>Author : " + this.author + "<hr>";
+            }
+        }
+
+        var user = new book("C",500,202,"Gautam vala");
+        user.display();
+        
+        var user = new book("C++",1500,2002,"Gautam vala");
+        user.display();
+    </script>
+</body>
+
+</html>

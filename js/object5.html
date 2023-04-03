@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="area">
+
+    </div>
+    <div id="volume">
+
+    </div>
+    <script>
+        class box {
+            constructor(length, width, deapth) {
+                this.length = length;
+                this.width = width;
+                this.deapth = deapth;
+            }
+            showarea() {
+                var result = this.length * this.width;
+                document.getElementById("area").innerHTML += `<br> Area = ${result}`;
+            }
+            showvolume() {
+                var result = this.length * this.width * this.deapth;
+                document.getElementById("volume").innerHTML += `<br> Volume = ${result}`;
+            }
+        }
+        var a1 = new box(10,20,30);
+        a1.showarea();
+        a1.showvolume();
+        
+        var a1 = new box(100,20,30);
+        a1.showarea();
+        a1.showvolume();
+    </script>
+</body>
+
+</html>

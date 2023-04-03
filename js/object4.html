@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>3st method to create object</h1>
+    <div id="root">
+
+    </div>
+    <script>
+        "use strict";
+        class car{
+            constructor (name,price,color)
+            {
+                this.brand = name;
+                this.price = price;
+                this.color = color;
+            }
+            display()
+            {
+                var root = document.getElementById("root");
+                root.innerHTML += `<br>Brand : ${this.brand} <br>Price : ${this.price} <br>Color : ${this.color} <hr>`;
+            }
+        }
+
+        var c1 = new car('MINI',4000000,'black');
+        c1.display();
+        var c1 = new car('BMw',8000000,'black');
+        c1.display();
+    </script>
+</body>
+
+</html>

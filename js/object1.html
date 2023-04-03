@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1st method to create object</h1>
+    <div id="root">
+
+    </div>
+    <script>
+        var gtu = {
+            name : 'Gautam Vala',
+            course : 'IT',
+            e_no : 196490316570,
+            location : 'Bhavnagar',
+            pincode : 364290,
+            isCertified : true
+        }
+        console.log(gtu);
+        var root = document.getElementById("root");
+        root.innerHTML = "Name : " + gtu.name;
+        root.innerHTML += "<br>Course : " + gtu.course;
+        root.innerHTML += "<br>E_No : " + gtu.e_no;
+        root.innerHTML += "<br>Location : " + gtu.location;
+        root.innerHTML += "<br>Pincode : " + gtu.pincode;
+        root.innerHTML += "<br>isCertified : " + gtu.isCertified;
+
+        gtu.Sem = 6;
+        gtu.lastresultsem = 5;
+
+        root.innerHTML += "<br>Sem : " + gtu.Sem;
+        root.innerHTML += "<br>LastResult Sem : " + gtu.lastresultsem;
+    </script>
+</body>
+
+</html>
