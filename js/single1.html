@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Single level inheritance</h2>
+    <div id="root">
+
+    </div>
+    <script>
+        //create class es6 
+        class preson {
+
+            gm() {
+                document.getElementById("root").innerHTML += "<br> Preson Hello Good Morning";
+            }
+            ge() {
+                document.getElementById("root").innerHTML += "<br> Preson Hello Good Evening";
+            }
+            gn() {
+                document.getElementById("root").innerHTML += "<br> Preson Hello Good Night";
+            }
+            WhatIcando()
+            {
+                this.gm();
+                this.ge();
+                this.gn();
+            }
+        }
+        class student extends preson
+        {
+            read() {
+                document.getElementById("root").innerHTML += "<br> Student can read";
+            }
+            write() {
+                document.getElementById("root").innerHTML += "<br> Student can write";
+            }
+            walk() {
+                document.getElementById("root").innerHTML += "<br> Student can walk";
+            }
+            WhatIcando(){
+
+                super.WhatIcando();
+                this.read();
+                this.write();
+                this.walk();
+            }
+        }
+        var v1 = new student();
+        v1.WhatIcando();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Single level inheritance</h2>
+    <div id="root">
+
+    </div>
+    <script src="common-class.js"></script>
+    <script>
+        //create class es6 
+        class preson extends IO {
+
+            gm() {
+                super.html('root',"<br> Preson Hello Good Morning");
+            }
+            ge() {
+                super.html('root',"<br> Preson Hello Good Evening");
+            }
+            gn() {
+                super.html('root',"<br> Preson Hello Good Night");
+            }
+            WhatIcando() {
+                this.gm();
+                this.ge();
+                this.gn();
+            }
+        }
+        var v1 = new preson();
+        v1.WhatIcando();
+    </script>
+</body>
+
+</html>
