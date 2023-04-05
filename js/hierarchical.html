@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    <h2>Multilevel inheritance</h2>
+    <h2>hierarchical inheritance</h2>
     <div id="root">
 
     </div>
     <script>
-        //create class es6 
         class preson {
 
             gm() {
@@ -50,25 +49,27 @@
                 this.walk();
             }
         }
-        class teacher extends student{
+        class actor extends preson {
 
-            teach()
-            {
-                document.getElementById("root").innerHTML += "<br> Teacher can Teach";
+            dance() {
+                document.getElementById("root").innerHTML += "<br/> actor can dance";
             }
-            homework()
-            {
-                document.getElementById("root").innerHTML += "<br> Teacher can Homework";
+            acting() {
+                document.getElementById("root").innerHTML += "<br/> actor can acting";
             }
             WhatIcando()
             {
-                this.teach();
-                this.homework();
+                this.acting();
+                this.dance();
                 super.WhatIcando();
             }
         }
-        var v1 = new teacher();
-        v1.WhatIcando();
+
+        var a1 = new actor();
+        a1.WhatIcando();
+
+        var a2 =new student();
+        a2.WhatIcando();
     </script>
 </body>
 

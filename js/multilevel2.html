@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Multilevel inheritance</h2>
+    <form action="">
+        <table border="2" align="center">
+            <tr>
+                <td>Enter Bytes</td>
+                <td>
+                    <input type="number" id="bytes">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="button" value="Convert" id="convert">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" id="output">
+
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var bytes = document.getElementById("bytes");
+        var convert = document.getElementById("convert");
+        var output = document.getElementById("output");
+
+        class KB {
+
+            constructor(bytes) {
+                this.bytes = bytes;
+                console.log('constructor called for kb');
+            }
+            getkb() {
+                let temp = this.bytes / 1024;
+                return temp;
+            }
+        }
+
+        class MB extends KB {
+
+            constructor(bytes) {
+                super(bytes);
+                console.log('constructor called for mb');
+            }
+            getmb() {
+                let temp = super.getkb() / 1024;
+                return temp;
+            }
+        }
+
+        class GB extends MB {
+
+            constructor(bytes) {
+                super(bytes);
+                console.log('constructor called for gb');
+            }
+            getgb()
+            {
+                let temp = super.getmb() / 1024;
+                return temp;
+            }
+        }
+        convert.onclick = function () {
+            // var a1 = new KB(bytes.value);
+            // var result = a1.getkb();
+            // output.innerHTML += "<br> Kilobytes = " + result; 
+            // var a1 = new MB(bytes.value);
+            // var result = a1.getmb();
+            // output.innerHTML += "<br> megabyte = " + result;
+            var a1 = new GB(bytes.value);
+            var result = a1.getgb();
+            output.innerHTML += "<br> gigabytes  = " + result;
+        }
+    </script>
+</body>
+
+</html>
