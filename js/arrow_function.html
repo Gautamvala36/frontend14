@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function Binding</h1>
+    <p id="root">
+
+    </p>
+    <script>
+        // let square = function(number){
+        //     return number * number;
+        // }
+        // or 
+        // arrow function
+        let square = (number) => number * number;
+
+        // let qube = function (number) {
+        //     return number * number * number;
+        // }
+        // or
+        // arrow function
+        let qube = (number) => number * number * number;
+        
+        var root = document.getElementById("root");
+        root.innerHTML = "<br> square = " + square();
+        root.innerHTML += "<br> qube = " + qube();
+    </script>
+</body>
+
+</html>

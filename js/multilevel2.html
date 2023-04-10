@@ -34,7 +34,7 @@
         var bytes = document.getElementById("bytes");
         var convert = document.getElementById("convert");
         var output = document.getElementById("output");
-
+        //parent/root/base class 
         class KB {
 
             constructor(bytes) {
@@ -46,7 +46,8 @@
                 return temp;
             }
         }
-
+        
+        //child/sub/dervied class 
         class MB extends KB {
 
             constructor(bytes) {
@@ -71,6 +72,8 @@
                 return temp;
             }
         }
+
+         //create object
         convert.onclick = function () {
             // var a1 = new KB(bytes.value);
             // var result = a1.getkb();

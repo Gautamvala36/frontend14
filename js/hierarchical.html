@@ -14,6 +14,7 @@
 
     </div>
     <script>
+        //parent/root/base class 
         class preson {
 
             gm() {
@@ -31,6 +32,8 @@
                 this.gn();
             }
         }
+        //child/sub/dervied class 
+
         class student extends preson {
             read() {
                 document.getElementById("root").innerHTML += "<br> Student can read";
@@ -64,7 +67,7 @@
                 super.WhatIcando();
             }
         }
-
+         //create object
         var a1 = new actor();
         a1.WhatIcando();
 

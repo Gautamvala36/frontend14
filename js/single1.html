@@ -15,6 +15,7 @@
     </div>
     <script>
         //create class es6 
+         //parent/root/base class 
         class preson {
 
             gm() {
@@ -33,7 +34,7 @@
                 this.gn();
             }
         }
-        class student extends preson
+        class student extends preson    
         {
             read() {
                 document.getElementById("root").innerHTML += "<br> Student can read";
@@ -52,6 +53,8 @@
                 this.walk();
             }
         }
+
+          //create object
         var v1 = new student();
         v1.WhatIcando();
     </script>

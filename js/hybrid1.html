@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Hybrid inheritance</h2>
+    <div id="root">
+
+    </div>
+    <script>
+        //parent/root/base class 
+        class mymath {
+
+            getsquare(number) {
+                let square = number * number;
+                return square;
+            }
+            getpi() {
+                let pi = 3.14;
+                return pi;
+            }
+        }
+
+        //child/sub/dervied class 
+
+        class Circle extends mymath {
+
+            constructor(radius) {
+                super();
+                this.radius = radius;
+            }
+            getarea() {
+                let pi = super.getpi();
+                let square = super.getsquare(this.radius);
+                let area = pi * square;
+                return area;
+            }
+        }
+
+        class Sphere  extends Circle 
+        {
+            constructor(radius)
+            {
+                super(radius);
+            }
+            getarea()
+            {
+                let temp = super.getarea();
+                let area = 4 * temp;
+                return area;
+            }
+        }
+
+        class Cyliender extends mymath {
+
+            constructor(radius, height) {
+                super();
+                this.radius = radius;
+                this.height = height;
+            }
+            getarea()
+            {
+                let pi = super.getpi();
+                let square = super.getsquare(this.radius);
+                let area = (2 * pi * this.radius * this.height) + (2 * pi * square);
+                return area; 
+            }
+        }
+        
+        //create object
+
+        var radius = parseInt(prompt("Enetr radius", 0));
+        var a3 = new Sphere(radius);
+        root.innerHTML += "<br>area of Sphere = " + a3.getarea();
+    </script>
+
+</body>
+
+</html>
