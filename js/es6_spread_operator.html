@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>es6_spread_operator</h1>
+    <p>use console to see output</p>
+    <script>
+        var product = {
+            name : 'Iphone 14',
+            price : 130000,
+            company : "Apple"
+        };
+        
+        var newproduct = {
+            color : 'red',
+            price : 30000,
+            weight : 200
+        };
+        var UpdatedProduct = {...product, ...newproduct}
+        console.log(UpdatedProduct);
+
+        
+        var list1 = [1,2,3,4,5];
+        var list2 = [6,7,8,9,10];
+        var Updatedlist = [...list1, ...list2];
+        console.log(Updatedlist);
+
+
+        var lists1 = [1,2,3,4,5,6];
+        var lists2 = [4,5,6,7,8,9,10];
+        var Updatedlists = [...lists1, ...lists2];
+        console.log(Updatedlists);
+
+
+</script>
+</body>
+</html>
